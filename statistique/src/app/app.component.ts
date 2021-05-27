@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Statistique } from './models/statistique';
+import { StatistiqueService } from './service/statistique.service';
 
 @Component({
   selector: 'app-root',
@@ -14,11 +15,17 @@ export class AppComponent {
 
   public tabStatistique: Statistique[] = [this.test1, this.test2];
 
-  constructor() {
-    setTimeout(() => {
-      this.tabStatistique.push(
-        new Statistique('test3', 'Démographie en Espagne', '50M', 'WARNING')
-      );
-    }, 5000);
+  // constructor() {
+  //   setTimeout(() => {
+  //     this.tabStatistique.push(
+  //       new Statistique('test3', 'Démographie en Espagne', '50M', 'WARNING')
+  //     );
+  //   }, 5000);
+  // }
+
+  constructor(private statistiqueService: StatistiqueService) {
+    this.statistiqueService.getStatistique().then((tabStatistique) => {
+      this.tabStatistique = tabStatistique;
+    });
   }
 }
