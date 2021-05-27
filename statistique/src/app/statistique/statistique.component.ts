@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Statistique } from '../models/statistique';
 
 @Component({
   selector: 'app-statistique',
   templateUrl: './statistique.component.html',
-  styleUrls: ['./statistique.component.css']
+  styleUrls: ['./statistique.component.css'],
 })
 export class StatistiqueComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
