@@ -7,9 +7,10 @@ import { AppComponent } from './app.component';
 import { StatistiqueComponent } from './statistique/statistique.component';
 import { ListStatistiqueComponent } from './list-statistique/list-statistique.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormulaireComponent } from './formulaire/formulaire.component';
 
 @NgModule({
-  declarations: [AppComponent, StatistiqueComponent, ListStatistiqueComponent],
+  declarations: [AppComponent, StatistiqueComponent, ListStatistiqueComponent, FormulaireComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
