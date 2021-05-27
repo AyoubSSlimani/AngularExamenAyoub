@@ -1,5 +1,8 @@
-<h2>titre: {{ test1.titre }}</h2>
-<h2>valeur: {{ test1.valeur }}</h2>
+<!-- <h2>titre: {{ test1.titre }}</h2>
+<h2>valeur: {{ test1.valeur }}</h2> -->
 
-<app-statistique></app-statistique>
+<div class="container">
+  <app-list-statistique *ngFor="let s of tabStatistique" [statistique]="s">
+  </app-list-statistique>
+</div>
 <router-outlet></router-outlet>
